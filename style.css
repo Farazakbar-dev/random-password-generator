@@ -9,6 +9,10 @@ body {
     background-color: black;
     color: white; 
     padding: 50px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .container {
@@ -21,7 +25,7 @@ body {
     flex-direction: column;
     /* justify-content: center; */
     border-radius: 5px;
-    width: 400px;
+    /* width: 400px; */
 }
 
 h1 {
@@ -31,13 +35,13 @@ h1 {
 
 #heading-green {
     color: #34d399; 
-    
+    display: block; 
 
 }
 
 #para {
     margin-bottom: 30px; 
-
+    display: block; 
 }
 
 button{
@@ -48,7 +52,11 @@ button{
     color: white; 
     font-weight: bold; 
     border-radius: 5px; 
-    margin-bottom: 20px;  
+    margin-bottom: 20px; 
+    cursor: pointer; 
+}
+button:hover {
+    opacity: 0.8;
 }
 hr {
     width: 100%; 
@@ -58,9 +66,13 @@ hr {
 .result {
     display: flex; 
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 30px; 
     width: 100%;
+}
+.result p {
+    margin-left: 10px;
+    cursor: pointer; 
 }
 .generated-password {
     font-weight: 20px; 
@@ -68,4 +80,13 @@ hr {
     background-color: #273549;
     border: none; 
     border-radius: 2px;
+}
+
+
+.toast {
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translate(-50%);
+    display: none;
 }
